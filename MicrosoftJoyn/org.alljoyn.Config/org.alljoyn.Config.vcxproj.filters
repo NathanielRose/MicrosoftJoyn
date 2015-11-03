@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>4a99ee3a-a314-4be9-b766-561521508963</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AllJoynBusObjectManager.cpp" />
+    <ClCompile Include="AllJoynHelpers.cpp" />
+    <ClCompile Include="ConfigConsumer.cpp" />
+    <ClCompile Include="ConfigProducer.cpp" />
+    <ClCompile Include="ConfigServiceEventAdapter.cpp" />
+    <ClCompile Include="ConfigServiceEventArgs.cpp" />
+    <ClCompile Include="ConfigSignals.cpp" />
+    <ClCompile Include="ConfigWatcher.cpp" />
+    <ClCompile Include="TypeConversionHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="AllJoynBusObjectManager.h" />
+    <ClInclude Include="AllJoynHelpers.h" />
+    <ClInclude Include="ConfigConsumer.h" />
+    <ClInclude Include="ConfigEventArgs.h" />
+    <ClInclude Include="ConfigMethodResults.h" />
+    <ClInclude Include="ConfigProducer.h" />
+    <ClInclude Include="ConfigServiceEventAdapter.h" />
+    <ClInclude Include="ConfigServiceEventArgs.h" />
+    <ClInclude Include="ConfigSignals.h" />
+    <ClInclude Include="ConfigStructures.h" />
+    <ClInclude Include="ConfigWatcher.h" />
+    <ClInclude Include="IConfigService.h" />
+    <ClInclude Include="TypeConversionHelpers.h" />
+  </ItemGroup>
+</Project>

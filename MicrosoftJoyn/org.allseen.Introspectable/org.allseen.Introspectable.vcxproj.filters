@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>1fda013c-60ea-42f2-ace6-740a1894195b</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AllJoynBusObjectManager.cpp" />
+    <ClCompile Include="AllJoynHelpers.cpp" />
+    <ClCompile Include="IntrospectableConsumer.cpp" />
+    <ClCompile Include="IntrospectableProducer.cpp" />
+    <ClCompile Include="IntrospectableServiceEventAdapter.cpp" />
+    <ClCompile Include="IntrospectableServiceEventArgs.cpp" />
+    <ClCompile Include="IntrospectableSignals.cpp" />
+    <ClCompile Include="IntrospectableWatcher.cpp" />
+    <ClCompile Include="TypeConversionHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="AllJoynBusObjectManager.h" />
+    <ClInclude Include="AllJoynHelpers.h" />
+    <ClInclude Include="IIntrospectableService.h" />
+    <ClInclude Include="IntrospectableConsumer.h" />
+    <ClInclude Include="IntrospectableEventArgs.h" />
+    <ClInclude Include="IntrospectableMethodResults.h" />
+    <ClInclude Include="IntrospectableProducer.h" />
+    <ClInclude Include="IntrospectableServiceEventAdapter.h" />
+    <ClInclude Include="IntrospectableServiceEventArgs.h" />
+    <ClInclude Include="IntrospectableSignals.h" />
+    <ClInclude Include="IntrospectableStructures.h" />
+    <ClInclude Include="IntrospectableWatcher.h" />
+    <ClInclude Include="TypeConversionHelpers.h" />
+  </ItemGroup>
+</Project>
