@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net.Http;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -13,7 +14,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using System.Net.NetworkInformation;
 using Windows.Devices.AllJoyn;
+using Windows.Devices.WiFi;
 using org.allseen.LSF.LampState;
 using org.alljoyn.Notification.Producer;
 using System.Diagnostics;
@@ -32,13 +35,19 @@ namespace MicrosoftJoyn
         String _AlljoynNetwork;
         String _AlljoynNetwork_Private;
         public AllJoynAboutData AJnetworkData;
-        ProducerConsumer _phoneMessage;
 
-       public Binding AJNetwork = new Binding();
+        ProducerConsumer _phoneMessage;
         
 
+       public Binding AJNetwork = new Binding();
+                
+        public static void ShowNetworkInterfaces()
+        {
+            
+        }
         public MainPage()
         {
+            var clientnetwork = NetworkInterface.GetIsNetworkAvailable();
             this.InitializeComponent();
 
             FindLamp();
@@ -88,7 +97,7 @@ namespace MicrosoftJoyn
 
             AJNetwork.Mode = BindingMode.OneTime;
             AJNetwork.Source = "Test Network";
-           // Debug.WriteLine(AJnetworkData.AppId.ToString(), "AppID");
+            //Debug.WriteLine(AJnetworkData.AppId.ToString(), "AppID");
           
 
             if (joinResult.Status == AllJoynStatus.Ok)
@@ -96,6 +105,8 @@ namespace MicrosoftJoyn
                 _lampState = joinResult.Consumer;
                 Debug.WriteLine("Consumer has been susccessfully initialized");
                 await _lampState.SetOnOffAsync(true);
+                PowerSwitch.IsOn = true;
+
             }
             else
             {
@@ -123,6 +134,7 @@ namespace MicrosoftJoyn
 
         private async void PowerSwitch_Toggled(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            if(_lampState != null)
             await _lampState.SetOnOffAsync(PowerSwitch.IsOn);
         }
 

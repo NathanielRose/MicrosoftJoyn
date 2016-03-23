@@ -6,6 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
+    
+    
+    
 
     <Grid Background="#FFCDE8FF">
         <Grid.ColumnDefinitions>
@@ -26,7 +30,7 @@
         
         <TextBlock Grid.Row="0" FontSize="26" Text="Microsoft-Joyn V:1.0"/>
         <TextBlock Grid.Row="1" FontSize="16" Text="Power" Margin="0, 22,0,43" Grid.RowSpan="2" />
-        <ToggleSwitch Grid.Row="1" x:Name="PowerSwitch" OnContent="On" OffContent="Off" Toggled="PowerSwitch_Toggled" Margin="60,13,0,12" />
+        <ToggleSwitch Grid.Row="1" x:Name="PowerSwitch" OnContent="On" OffContent="Off" Toggled="PowerSwitch_Toggled" Margin="60,13,0,12"  />
 
         
         <TextBlock Grid.Row ="2" x:Name="CWN" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Current Wireless Network:" VerticalAlignment="Top"/>
@@ -49,19 +53,25 @@
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="100" Margin="86,41,0,0" Grid.Row="4" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>
         
         <TextBlock Grid.Row="6"   FontSize="28" Text="Notification Messages" />
-        <ListBox ItemsSource="{StaticResource AJMessages}" Grid.Row="7" Margin="0,5,0,10" Height="250">
+        <ListBox Grid.Row="7" Margin="0,5,0,10" Height="250">
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Padding="5,0,5,0"
-          Text="{Binding DeviceID}" />
-                    <TextBlock Text="{Binding Message}" />
-                    <TextBlock Text=", " />
-                    <TextBlock Text="{Binding Time}" />
+                        <TextBlock Padding="5,0,5,0"></TextBlock>
                 </StackPanel>
             </DataTemplate>
         </ListBox.ItemTemplate>
-    </ListBox>
+            <ListBoxItem Content="Coffie"></ListBoxItem>
+    <ListBoxItem Content="Tea"></ListBoxItem>
+    <ListBoxItem Content="Orange Juice"></ListBoxItem>
+    <ListBoxItem Content="Milk"></ListBoxItem>
+    <ListBoxItem Content="Iced Tea"></ListBoxItem>
+    <ListBoxItem Content="Mango Shake"></ListBoxItem>
+    </ListBox> 
+        
+        
+        
+        
 
     </Grid>
 </Page>
